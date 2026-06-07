@@ -1,2 +1,15 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+# Force GitHub to recognize Dart as the main language
+*.dart linguist-detectable=true
+*.dart linguist-language=Dart
+
+# Exclude everything else from language detection
+pubspec.* linguist-detectable=false
+*.yaml linguist-detectable=false
+*.json linguist-detectable=false
+*.md linguist-detectable=false
+
+# Mark all non-Dart code as generated or vendored
+ios/** linguist-generated=true
+android/** linguist-generated=true
+*.py linguist-generated=true
